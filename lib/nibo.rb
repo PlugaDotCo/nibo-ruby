@@ -5,10 +5,11 @@ require "active_support/all"
 
 require "nibo/version"
 
-require "nibo/object"
 require "nibo/api_resource"
 require "nibo/api_resource/create"
 require "nibo/api_resource/retrieve"
+require "nibo/object"
+require "nibo/account"
 
 module Nibo
   @@api_key
@@ -39,38 +40,5 @@ module Nibo
     Base64.encode64(OpenSSL::HMAC.digest('sha1',
                                          Base64.decode64(Base64.encode64(@@api_secret).gsub("\n", '')),
                                          "#{@@api_key}|#{time_stamp}|#{@@user}|#{@@api_key}")).chomp
-  end
-
-  class Account < Nibo::Object
-    include ApiResource
-    include ApiResource::Create
-    include ApiResource::Retrieve
-
-    def self.url
-      "/#{CGI.escape(class_name)}"
-    end
-
-    def self.url_method(method)
-      case method
-        when :get
-          '/GetAccount'
-        when :post
-          '/CreateAccount'
-      end
-
-    end
-
-    def self.object_param(param, method)
-      case method
-        when :get
-          {accountId: param}
-        when :post
-          param
-      end
-    end
-
-    def self.class_name
-      self.name.split('::')[-1]
-    end
   end
 end
