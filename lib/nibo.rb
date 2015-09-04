@@ -7,6 +7,7 @@ require "nibo/version"
 
 require "nibo/object"
 require "nibo/api_resource"
+require "nibo/api_resource/create"
 require "nibo/api_resource/retrieve"
 
 module Nibo
@@ -42,6 +43,7 @@ module Nibo
 
   class Account < Nibo::Object
     include ApiResource
+    include ApiResource::Create
     include ApiResource::Retrieve
 
     def self.url
@@ -49,11 +51,22 @@ module Nibo
     end
 
     def self.url_method(method)
-      '/GetAccount'
+      case method
+        when :get
+          '/GetAccount'
+        when :post
+          '/CreateAccount'
+      end
+
     end
 
-    def self.object_param(param)
-      {accountId: param}
+    def self.object_param(param, method)
+      case method
+        when :get
+          {accountId: param}
+        when :post
+          param
+      end
     end
 
     def self.class_name

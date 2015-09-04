@@ -25,7 +25,13 @@ module Nibo
         params = nil
       end
 
-      response = ::RestClient.get(url, headers)
+      response = case method
+            when :get
+              RestClient.get(url, headers)
+            when :post
+              RestClient.post(url, params.to_json, headers)
+          end
+
       JSON.parse(response).deep_symbolize_keys
     end
 
