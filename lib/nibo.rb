@@ -40,9 +40,24 @@ module Nibo
                                          "#{@@api_key}|#{time_stamp}|#{@@user}|#{@@api_key}")).chomp
   end
 
-  class Account
-    def self.retrieve(account_id)
-      Account.new
+  class Account < Nibo::Object
+    include ApiResource
+    include ApiResource::Retrieve
+
+    def self.url
+      "/#{CGI.escape(class_name)}"
+    end
+
+    def self.url_method(method)
+      '/GetAccount'
+    end
+
+    def self.object_param(param)
+      {accountId: param}
+    end
+
+    def self.class_name
+      self.name.split('::')[-1]
     end
   end
 end
