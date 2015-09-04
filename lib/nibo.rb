@@ -8,6 +8,8 @@ require "nibo/version"
 require "nibo/api_resource"
 require "nibo/api_resource/create"
 require "nibo/api_resource/retrieve"
+require "nibo/api_resource/list"
+
 require "nibo/object"
 require "nibo/account"
 

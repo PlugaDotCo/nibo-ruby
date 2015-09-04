@@ -38,4 +38,13 @@ describe Nibo::Account do
     expect(account.Balance).to eq(0.0)
     expect(account.BalanceDate).to eq('0001-01-01T00:00:00')
   end
+
+  it 'should list all accounts' do
+    result = [{"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"522baa54-e0f8-4f6e-930e-064f3080d061","Description":"Conta de Teste","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"},{"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"cacb2314-4d5c-4490-978d-13c82cff54f5","Description":"Conta de Teste","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}].to_json
+    allow(RestClient).to receive(:get).and_return(result)
+
+    accounts = Nibo::Account.list
+
+    expect(accounts.size).to eq(2)
+  end
 end

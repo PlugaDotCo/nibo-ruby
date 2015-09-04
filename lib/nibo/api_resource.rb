@@ -32,7 +32,8 @@ module Nibo
               RestClient.post(url, params.to_json, headers)
           end
 
-      JSON.parse(response).deep_symbolize_keys
+      result = JSON.parse(response)
+      (result.is_a? Hash) ? result.deep_symbolize_keys : result.map {|object| object.deep_symbolize_keys}
     end
 
     def self.included(base)

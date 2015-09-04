@@ -3,6 +3,7 @@ module Nibo
     include ApiResource
     include ApiResource::Create
     include ApiResource::Retrieve
+    include ApiResource::List
 
     def self.url
       "/#{CGI.escape(class_name)}"
