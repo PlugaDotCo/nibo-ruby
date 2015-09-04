@@ -4,6 +4,7 @@ module Nibo
     include ApiResource::Create
     include ApiResource::Retrieve
     include ApiResource::List
+    include ApiResource::Delete
 
     def self.url
       "/#{CGI.escape(class_name)}"
@@ -15,13 +16,15 @@ module Nibo
           '/GetAccount'
         when :post
           '/CreateAccount'
+        when :delete
+          '/DeleteAccount'
       end
 
     end
 
     def self.object_param(param, method)
       case method
-        when :get
+        when :get, :delete
           {accountId: param}
         when :post
           param

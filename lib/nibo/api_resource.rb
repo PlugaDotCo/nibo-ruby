@@ -19,18 +19,21 @@ module Nibo
                  content_type: 'application/json',
                  accept: 'application/json'}
 
-      if method == :get && params
+      if (method == :get or method == :delete) && params
         params_encoded = encode(params)
         url = "#{url}?#{params_encoded}"
         params = nil
       end
 
       response = case method
-            when :get
-              RestClient.get(url, headers)
-            when :post
-              RestClient.post(url, params.to_json, headers)
-          end
+          when :get
+            RestClient.get(url, headers)
+          when :post
+            RestClient.post(url, params.to_json, headers)
+          when :delete
+            RestClient.delete(url, headers)
+            {}.to_json
+        end
 
       result = JSON.parse(response)
       (result.is_a? Hash) ? result.deep_symbolize_keys : result.map {|object| object.deep_symbolize_keys}

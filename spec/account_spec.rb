@@ -47,4 +47,12 @@ describe Nibo::Account do
 
     expect(accounts.size).to eq(2)
   end
+
+  it 'should delete an account from Nibo API' do
+    account_id = '10968472-9926-453b-a0b1-fc74f029d512'
+
+    account = Nibo::Account.delete(account_id)
+
+    expect(account).to eq('deleted')
+  end
 end

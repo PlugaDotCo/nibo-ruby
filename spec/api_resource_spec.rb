@@ -26,7 +26,7 @@ describe Nibo::ApiResource do
   end
 
   context Nibo::ApiResource::Retrieve do
-    it 'should retrieve a account from Nibo API' do
+    it 'should retrieve an account from Nibo API' do
       account_id = '10968472-9926-453b-a0b1-fc74f029d512'
 
       account = Nibo::Account.retrieve(account_id)
@@ -47,6 +47,16 @@ describe Nibo::ApiResource do
       accounts = Nibo::Account.list
 
       expect(accounts.size).to eq(2)
+    end
+  end
+
+  context Nibo::ApiResource::Delete do
+    it 'should delete an account from Nibo API' do
+      account_id = '10968472-9926-453b-a0b1-fc74f029d512'
+
+      account = Nibo::Account.delete(account_id)
+
+      expect(account).to eq('deleted')
     end
   end
 end
