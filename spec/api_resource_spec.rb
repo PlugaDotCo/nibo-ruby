@@ -11,15 +11,17 @@ describe Nibo::ApiResource do
     it 'should create a new accountect in Nibo API' do
       time_stamp =  Time.now.utc.strftime('%d/%m/%Y')
 
-      params = {Description: 'Conta de Teste',
+      params = {Description: 'Banco do Brasil',
                  Balance: 1000,
                  BalanceDate: time_stamp}
+      result = {"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"10968472-9926-453b-a0b1-fc74f029d512","Description":"Banco do Brasil","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}.to_json
+      allow(RestClient).to receive(:post).and_return(result)
 
       account = Nibo::Account.create(params)
 
       expect(account.OrganizationId).to_not be_nil
       expect(account.AccountId).to_not be_nil
-      expect(account.Description).to eq('Conta de Teste')
+      expect(account.Description).to eq('Banco do Brasil')
       expect(account.Balance).to eq(0.0)
       expect(account.BalanceDate).to eq('0001-01-01T00:00:00')
     end
@@ -28,6 +30,8 @@ describe Nibo::ApiResource do
   context Nibo::ApiResource::Retrieve do
     it 'should retrieve an account from Nibo API' do
       account_id = '10968472-9926-453b-a0b1-fc74f029d512'
+      result = {"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"10968472-9926-453b-a0b1-fc74f029d512","Description":"Banco do Brasil","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}.to_json
+      allow(RestClient).to receive(:get).and_return(result)
 
       account = Nibo::Account.retrieve(account_id)
 
@@ -53,6 +57,8 @@ describe Nibo::ApiResource do
   context Nibo::ApiResource::Delete do
     it 'should delete an account from Nibo API' do
       account_id = '10968472-9926-453b-a0b1-fc74f029d512'
+      result = ''
+      allow(RestClient).to receive(:delete).and_return(result)
 
       account = Nibo::Account.delete(account_id)
 
