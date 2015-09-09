@@ -30,4 +30,26 @@ describe Nibo::Entity do
 
     expect(entities.size).to eq(2)
   end
+
+  it 'should get a entity by some attribute' do
+    result = [{"EntityId":"585d14ca-fa54-44ed-98cc-89b32d085211","Type":"Customer","Name":"Eu Teste","Email":"eu@teste.com","Phone":nil,"Mobile":nil,"Contact":nil,"Url":nil,"IsCompany":false,"CpfCnpj":nil,"CompanyName":nil,"Registration":nil,"AddressLine1":nil,"AddressNumber":nil,"AddressLine2":nil,"District":nil,"City":nil,"State":nil,"ZipCode":nil,"Country":nil,"BankName":nil,"BankAgency":nil,"BankAccount":nil},
+              {"EntityId":"2d995742-0225-45df-a328-11f68f3e5821","Type":"Customer","Name":"Recebimento Teste","Email":nil,"Phone":nil,"Mobile":nil,"Contact":nil,"Url":nil,"IsCompany":false,"CpfCnpj":nil,"CompanyName":nil,"Registration":nil,"AddressLine1":nil,"AddressNumber":nil,"AddressLine2":nil,"District":nil,"City":nil,"State":nil,"ZipCode":nil,"Country":nil,"BankName":nil,"BankAgency":nil,"BankAccount":nil}].to_json
+    allow(RestClient).to receive(:get).and_return(result)
+
+    entity = Nibo::Entity.find_by({type: 'Customer', email: 'eu@teste.com'})
+
+    expect(entity.EntityId).to_not be_nil
+    expect(entity.Type).to eq('Customer')
+    expect(entity.Name).to eq('Eu Teste')
+    expect(entity.Email).to eq('eu@teste.com')
+  end
+
+  it 'should not find a entity by some attribute' do
+    result = [{"EntityId":"585d14ca-fa54-44ed-98cc-89b32d085211","Type":"Customer","Name":"Eu Teste","Email":"eu@teste.com","Phone":nil,"Mobile":nil,"Contact":nil,"Url":nil,"IsCompany":false,"CpfCnpj":nil,"CompanyName":nil,"Registration":nil,"AddressLine1":nil,"AddressNumber":nil,"AddressLine2":nil,"District":nil,"City":nil,"State":nil,"ZipCode":nil,"Country":nil,"BankName":nil,"BankAgency":nil,"BankAccount":nil},
+                  {"EntityId":"2d995742-0225-45df-a328-11f68f3e5821","Type":"Customer","Name":"Recebimento Teste","Email":nil,"Phone":nil,"Mobile":nil,"Contact":nil,"Url":nil,"IsCompany":false,"CpfCnpj":nil,"CompanyName":nil,"Registration":nil,"AddressLine1":nil,"AddressNumber":nil,"AddressLine2":nil,"District":nil,"City":nil,"State":nil,"ZipCode":nil,"Country":nil,"BankName":nil,"BankAgency":nil,"BankAccount":nil}].to_json
+    allow(RestClient).to receive(:get).and_return(result)
+
+    entity = Nibo::Entity.find_by({type: 'Customer', email: 'wrong_eu@teste.com'})
+    expect(entity).to be_nil
+  end
 end
