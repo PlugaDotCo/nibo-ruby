@@ -44,6 +44,14 @@ module Nibo
       end
     end
 
+    def self.url
+      "/#{CGI.escape(class_name)}"
+    end
+
+    def self.class_name
+      self.name.split('::')[-1]
+    end
+
     def initialize
       @values = {}
     end

@@ -13,6 +13,8 @@ require "nibo/api_resource/delete"
 
 require "nibo/object"
 require "nibo/account"
+require "nibo/category"
+require "nibo/entity"
 
 module Nibo
   @@api_key
