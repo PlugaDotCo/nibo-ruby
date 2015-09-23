@@ -15,6 +15,8 @@ require "nibo/object"
 require "nibo/account"
 require "nibo/category"
 require "nibo/entity"
+require "nibo/schedule"
+require "nibo/entry"
 
 module Nibo
   @@api_key
