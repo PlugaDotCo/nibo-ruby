@@ -14,7 +14,7 @@ describe Nibo::ApiResource do
       params = {Description: 'Banco do Brasil',
                  Balance: 1000,
                  BalanceDate: time_stamp}
-      result = {"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"10968472-9926-453b-a0b1-fc74f029d512","Description":"Banco do Brasil","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}.to_json
+      result = {"OrganizationId" => "5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId" => "10968472-9926-453b-a0b1-fc74f029d512","Description" => "Banco do Brasil","Balance" => 0.0,"BalanceDate" => "0001-01-01T00:00:00"}.to_json
       allow(RestClient).to receive(:post).and_return(result)
 
       account = Nibo::Account.create(params)
@@ -30,7 +30,7 @@ describe Nibo::ApiResource do
   context Nibo::ApiResource::Retrieve do
     it 'should retrieve an account from Nibo API' do
       account_id = '10968472-9926-453b-a0b1-fc74f029d512'
-      result = {"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"10968472-9926-453b-a0b1-fc74f029d512","Description":"Banco do Brasil","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}.to_json
+      result = {"OrganizationId" => "5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId" => "10968472-9926-453b-a0b1-fc74f029d512","Description" => "Banco do Brasil","Balance" => 0.0,"BalanceDate" => "0001-01-01T00:00:00"}.to_json
       allow(RestClient).to receive(:get).and_return(result)
 
       account = Nibo::Account.retrieve(account_id)
@@ -45,7 +45,7 @@ describe Nibo::ApiResource do
 
   context Nibo::ApiResource::List do
     it 'should list all accounts from Nibo API' do
-      result = [{"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"522baa54-e0f8-4f6e-930e-064f3080d061","Description":"Conta de Teste","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"},{"OrganizationId":"5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId":"cacb2314-4d5c-4490-978d-13c82cff54f5","Description":"Conta de Teste","Balance":0.0,"BalanceDate":"0001-01-01T00:00:00"}].to_json
+      result = [{"OrganizationId" => "5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId" => "522baa54-e0f8-4f6e-930e-064f3080d061","Description" => "Conta de Teste","Balance" => 0.0,"BalanceDate" => "0001-01-01T00:00:00"},{"OrganizationId" => "5d2b63a1-29ed-4204-b713-708c4afc0238","AccountId" => "cacb2314-4d5c-4490-978d-13c82cff54f5","Description" => "Conta de Teste","Balance" => 0.0,"BalanceDate" => "0001-01-01T00:00:00"}].to_json
       allow(RestClient).to receive(:get).and_return(result)
 
       accounts = Nibo::Account.list
