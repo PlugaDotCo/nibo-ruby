@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Nibo::Account do
+describe Nibo::Account, vcr: {match_requests_on: [:host]} do
   let(:time_stamp) {Time.now}
 
   it 'should get url for account' do

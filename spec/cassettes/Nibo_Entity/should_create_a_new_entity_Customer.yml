@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:FPk2ag%2BnR4RpfOS37aQh09YScys%3D@api.nibo.com.br/public/v1/Entity/CreateEntity
+    body:
+      encoding: UTF-8
+      string: '{"name":"Test Customer","email":"email@test.com","type":"Customer"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511101305'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '67'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '360'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=f58f9967e4d5298da27eb4ad18928e85b7b12e3a43d412e495cc706c1baac7cf;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Tue, 10 Nov 2015 13:05:36 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR6fLtmivz2YfPfpo9vDh+eR8b7J9fyff
+        296/9/Dh9sP7O9n2w8lOvjuZTg72dx9+NProzfUqp9Yn66atFnlNn7zIFvjk
+        Td60qffx6SIrSvo8x8/fs6Vvx9NqQV+8nFdLemG5LsvRR19Uk6K0f51Uyzab
+        tubPr2oCIL+eNSfVYpUtrz96dJ6VTU5tV+cny9VPmwb6tSAjH73KL4qmrbO2
+        qJbms+PZrM6b5nmxzHc7n71YLyaEefghGu6Zz54CXOHwOyHamd9ft1lre/6p
+        YnVSzeyfJ9V62da26ZNs+dbHE38fX+TLadDieDrFa/LRL/l/ADHczSarAQAA
+    http_version: 
+  recorded_at: Tue, 10 Nov 2015 13:05:36 GMT
+recorded_with: VCR 2.9.3

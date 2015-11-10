@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Nibo::Schedule do
+describe Nibo::Schedule, vcr: {match_requests_on: [:host]} do
 
   it 'should create a new Schedule' do
     Nibo.api_key = '47d9290a1c4c46efaaf0173369da2d8c'

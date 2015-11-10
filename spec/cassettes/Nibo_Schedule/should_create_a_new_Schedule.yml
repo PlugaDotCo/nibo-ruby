@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:FPk2ag%2BnR4RpfOS37aQh09YScys%3D@api.nibo.com.br/public/v1/Schedule/CreateSchedule
+    body:
+      encoding: UTF-8
+      string: '{"CategoryId":"dfd9fabe-bd8d-432b-9a4b-34184ea71269","EntityId":"585d14ca-fa54-44ed-98cc-89b32d085211","Value":15.0,"IsFlagged":false}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511101305'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '134'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '396'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=f58f9967e4d5298da27eb4ad18928e85b7b12e3a43d412e495cc706c1baac7cf;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Tue, 10 Nov 2015 13:05:42 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR1/WF9my+EHWFtXybPbRo4929Nmm/3f/
+        Mc9Ho49eT+f5bF3m/M7B+YP7B/m9e9uz3f1se386+XT74fTTve2H9w+y2b17
+        Bw/y3Yf0zk9m5Tr/6NHu/fHOzuijl1kx0092+IOz5lmZXVzkBPE8K5t89NHT
+        vJnWxQq4ffRouS7L0Uev8vO8zpdTeks+OMna/KKqrxmR2fns4Xk2ybcns4PZ
+        9v69vcn2w2x/sn1vf/dgP88e7O59CkTMOy+yBcEhmNO8aLN0Wi3SJq8vi3/0
+        r6waana6bItWAN8/uE9jm2bb59n9/e39/Xy2/fBgOt0+eDi5tzfbObi/t7tr
+        31Cwp+v0Td60uf38zfUKn5+sm7Za5PVHv+T/AdV7/HZ/AQAA
+    http_version: 
+  recorded_at: Tue, 10 Nov 2015 13:05:42 GMT
+recorded_with: VCR 2.9.3

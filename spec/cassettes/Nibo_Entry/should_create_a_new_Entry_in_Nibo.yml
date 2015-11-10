@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:FPk2ag%2BnR4RpfOS37aQh09YScys%3D@api.nibo.com.br/public/v1/Entry/CreateEntry
+    body:
+      encoding: UTF-8
+      string: '{"AccountId":"991f6cc0-0234-4cc2-af5b-6099c912a54e","EntityId":"585d14ca-fa54-44ed-98cc-89b32d085211","Value":120,"Description":"Description
+        test","Date":"2015-11-10T00:00:00","IsTransfer":false}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511101305'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '195'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '403'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=f58f9967e4d5298da27eb4ad18928e85b7b12e3a43d412e495cc706c1baac7cf;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Tue, 10 Nov 2015 13:05:40 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR6fLtr4+m3306KM8m+3Mznf2tj+dzibb
+        +5PdyfbDyWy6/XDn4c7u7nTy6fRg76PRR1/WF9my+EHWFtWS37s/25t8ei/b
+        3d57mM+29/d29rcnD3bvbT/YOZjuZ+fTnb17B/TeT2blOv/o0e7eznhn9NHT
+        rKU/Ptrb2b2/vbu7vbvzZmfnEf+Pmh5Pp9V62TL0hw93zz+dTne2Ccz+9v50
+        urednd+fbH+68/Dh9OHuXnZ/P6dXXk/n+Wxd5vzOwezT3QeTyYPtTyf3ptv7
+        s73Z9sPdh/vb5/nBAb02O7i3d4/eoaEXLY99uS7L0UcnhNNFJdTQT6qmPcmX
+        bV67z57mzbQuVhg+deX9lbZ50xLYs+ZNnS2b87yWV37J/wOhdo7GZQEAAA==
+    http_version: 
+  recorded_at: Tue, 10 Nov 2015 13:05:41 GMT
+recorded_with: VCR 2.9.3
