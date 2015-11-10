@@ -7,7 +7,7 @@ describe Nibo::Entry do
     Nibo.user = 'test@test.com'
   end
 
-  it 'should create a new Entry in Nibo', wip: true do
+  it 'should create a new Entry in Nibo' do
     date = Time.now.utc.strftime('%Y-%m-%d')
     params = {
               AccountId: '991f6cc0-0234-4cc2-af5b-6099c912a54e',
