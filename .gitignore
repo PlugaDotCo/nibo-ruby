@@ -10,4 +10,4 @@
 .idea/
 .ruby*
 *.gem
-./spec/cassetes/*
+./spec/cassettes/*

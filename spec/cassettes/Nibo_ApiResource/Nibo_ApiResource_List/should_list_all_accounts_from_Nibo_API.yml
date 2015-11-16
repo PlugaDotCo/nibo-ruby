@@ -1,24 +1,22 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://47d9290a1c4c46efaaf0173369da2d8c:FPk2ag%2BnR4RpfOS37aQh09YScys%3D@api.nibo.com.br/public/v1/Entity/CreateEntity
+    method: get
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:jwsqQnAJ1f9oK7AH0TD55XQRLjw%3D@api.nibo.com.br/public/v1/Account/GetAccounts
     body:
-      encoding: UTF-8
-      string: '{"name":"Test Customer","email":"email@test.com","type":"Customer"}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept:
       - application/json
       Accept-Encoding:
       - gzip, deflate
       Timestamp:
-      - '201511101305'
+      - '201511162139'
       User:
       - test@test.com
       Content-Type:
       - application/json
-      Content-Length:
-      - '67'
       User-Agent:
       - Ruby
   response:
@@ -31,7 +29,7 @@ http_interactions:
       Pragma:
       - no-cache
       Content-Length:
-      - '360'
+      - '374'
       Content-Type:
       - application/json; charset=utf-8
       Content-Encoding:
@@ -47,20 +45,21 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Set-Cookie:
-      - ARRAffinity=f58f9967e4d5298da27eb4ad18928e85b7b12e3a43d412e495cc706c1baac7cf;Path=/;Domain=api.nibo.com.br
+      - ARRAffinity=22ebe0dfe9b68de9c31c472594d458f5563f012939a93ad80031eceb131a4227;Path=/;Domain=api.nibo.com.br
       Date:
-      - Tue, 10 Nov 2015 13:05:36 GMT
+      - Mon, 16 Nov 2015 21:39:10 GMT
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
         kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
-        AWz2zkrayZ4hgKrIHz9+fB8/In7xR6fLtmivz2YfPfpo9vDh+eR8b7J9fyff
-        296/9/Dh9sP7O9n2w8lOvjuZTg72dx9+NProzfUqp9Yn66atFnlNn7zIFvjk
-        Td60qffx6SIrSvo8x8/fs6Vvx9NqQV+8nFdLemG5LsvRR19Uk6K0f51Uyzab
-        tubPr2oCIL+eNSfVYpUtrz96dJ6VTU5tV+cny9VPmwb6tSAjH73KL4qmrbO2
-        qJbms+PZrM6b5nmxzHc7n71YLyaEefghGu6Zz54CXOHwOyHamd9ft1lre/6p
-        YnVSzeyfJ9V62da26ZNs+dbHE38fX+TLadDieDrFa/LRL/l/ADHczSarAQAA
+        AWz2zkrayZ4hgKrIHz9+fB8/Ir73iz/6sr7IlsUPsraolmezjx59dH+2N/n0
+        Xra7vfcwn23v7+3sb08e7N7bfrBzMN3Pzqc7e/cOPhp9dDydVutly6/kn07u
+        fbr74P72g/29ve39e9nD7ezg/sPtnfP755Pdvd2DT/fu0ytP82ZaFyv0RC89
+        yZbTKp1V6ZM6a4qSvn+SlfRZ/tGj3Z2dnfHOjv3kadbSpx/t7eze397d3d79
+        9M3OziP+30e/ZPTNDGH34OGn54Ts9n42ube9P314b/vh3vnD7YPzB/nBdHpv
+        78HB/9uHkE939x7sTfLtvXu7NAsPz/e2D+7v79E4dmcHn84e3MuzPXrlfYZw
+        2xF8//8BZ7XQa0kCAAA=
     http_version: 
-  recorded_at: Tue, 10 Nov 2015 13:05:36 GMT
+  recorded_at: Mon, 16 Nov 2015 21:39:11 GMT
 recorded_with: VCR 2.9.3

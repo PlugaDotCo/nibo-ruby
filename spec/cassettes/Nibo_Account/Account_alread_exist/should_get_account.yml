@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:%2FWj9LUK%2FFReVbM7S%2BEZ376tcNu8%3D@api.nibo.com.br/public/v1/Account/GetAccounts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511162137'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '288'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=22ebe0dfe9b68de9c31c472594d458f5563f012939a93ad80031eceb131a4227;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Mon, 16 Nov 2015 21:37:33 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/Ir73iz/6sr7IlsUPsraolmezjx59dH+2N/n0
+        Xra7vfcwn23v7+3sb08e7N7bfrBzMN3Pzqc7e/cOPhp9dDydVutly6/s7O/t
+        zbJZvr072cu2988fHmwfHOzvb2fnB/f2DqaTycOHe/TK07yZ1sUKPdFLT7Ll
+        tEpnVfqkzpqipO+fZCV9ln/0aHdnZ7yzYz94mrX04Ud7O7v3t3d3t3c/fbOz
+        84j/99Ev+f7/A16cFv3DAAAA
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 21:37:33 GMT
+- request:
+    method: delete
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:%2FWj9LUK%2FFReVbM7S%2BEZ376tcNu8%3D@api.nibo.com.br/public/v1/Account/DeleteAccount?accountId=0422dade-1b2a-4f98-8844-af8328cbb992
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511162137'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '0'
+      Expires:
+      - '-1'
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=22ebe0dfe9b68de9c31c472594d458f5563f012939a93ad80031eceb131a4227;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Mon, 16 Nov 2015 21:37:33 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 21:37:33 GMT
+- request:
+    method: post
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:%2FWj9LUK%2FFReVbM7S%2BEZ376tcNu8%3D@api.nibo.com.br/public/v1/Account/CreateAccount
+    body:
+      encoding: UTF-8
+      string: '{"Description":"Banco do Brasil","Balance":100.0,"BalanceDate":"11/16/2015"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511162137'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '76'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '283'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=22ebe0dfe9b68de9c31c472594d458f5563f012939a93ad80031eceb131a4227;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Mon, 16 Nov 2015 21:37:34 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR1/WF9my+EHWFtXybPbRo4/uz/Ymn97L
+        drf3Huaz7f29nf3tyYPde9sPdg6m+9n5dGfv3sFHo4+Op9NqvWz5lf0H2fT+
+        bHawne3tPdjeP5jsbGcEZnu2s3t/cj59+On9g/v0ytO8mdbFCj3RS0+y5bRK
+        Z1X6pM6aoqTvn2QlfZZ/9Gh3Z2e8s2M/eJq19OFHewRte3d3e/fTNzs7j/h/
+        H/2S/wcT+D0VwQAAAA==
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 21:37:34 GMT
+- request:
+    method: post
+    uri: http://47d9290a1c4c46efaaf0173369da2d8c:%2FWj9LUK%2FFReVbM7S%2BEZ376tcNu8%3D@api.nibo.com.br/public/v1/Account/CreateAccount
+    body:
+      encoding: UTF-8
+      string: '{"Description":"Banco do Brasil","Balance":100.0,"BalanceDate":"11/16/2015"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Timestamp:
+      - '201511162137'
+      User:
+      - test@test.com
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '76'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '287'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Expires:
+      - '-1'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Set-Cookie:
+      - ARRAffinity=22ebe0dfe9b68de9c31c472594d458f5563f012939a93ad80031eceb131a4227;Path=/;Domain=api.nibo.com.br
+      Date:
+      - Mon, 16 Nov 2015 21:37:34 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+        kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+        AWz2zkrayZ4hgKrIHz9+fB8/In7xR1/WF9my+EHWFtXybPbRo4/uz/Ymn97L
+        drf3Huaz7f29nf3tyYPde9sPdg6m+9n5dGfv3sFHo4+Op9NqvWz5lb17u/uf
+        HpxPtmf79z7d3j8/v799sLuXbe/u7H+a7+5Nd/f2HtArT/NmWhcr9EQvPcmW
+        0yqdVemTOmuKkr5/kpX0Wf7Ro92dnfHOjv3gadbShx/t7eze397d3d799M3O
+        ziP+30e/5P8BvkcoIMEAAAA=
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 21:37:35 GMT
+recorded_with: VCR 2.9.3
