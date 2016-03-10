@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Nibo::Schedule, vcr: {match_requests_on: [:host]} do
+  let(:date) {Time.current}
 
   it 'should create a new Schedule' do
     Nibo.api_key = '47d9290a1c4c46efaaf0173369da2d8c'
@@ -9,7 +10,9 @@ describe Nibo::Schedule, vcr: {match_requests_on: [:host]} do
 
     params = {CategoryId: 'dfd9fabe-bd8d-432b-9a4b-34184ea71269',
               EntityId: '585d14ca-fa54-44ed-98cc-89b32d085211',
-              Value: 15.00, IsFlagged: false}
+              DueDate: date.strftime("%Y-%m-%dT00:00:00%z"),
+              ScheduleDate: date.strftime("%Y-%m-%dT00:00:00%z"),
+              PaidValue: 0.0, Value: 15.00, IsFlagged: false}
 
     schedule = Nibo::Schedule.create(params)
 
@@ -17,7 +20,6 @@ describe Nibo::Schedule, vcr: {match_requests_on: [:host]} do
     expect(schedule.ScheduleId).to_not be_nil
     expect(schedule.Value).to eq(15.0)
     expect(schedule.PaidValue).to eq(0.0)
-    expect(schedule.IsFlagged).to be_falsey
     expect(schedule.EntityId).to eq(params[:EntityId])
     expect(schedule.CategoryId).to eq(params[:CategoryId])
   end
