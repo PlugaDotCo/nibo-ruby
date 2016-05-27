@@ -41,4 +41,16 @@ describe Nibo::Entity, vcr: {match_requests_on: [:host]} do
     entity = Nibo::Entity.find_by({type: 'Customer', email: 'wrong_eu@teste.com'})
     expect(entity).to be_nil
   end
+
+  it 'should get a entity by some attribute', wip:  true do
+    e1 = Nibo::Entity.create(name: 'Test Customer', email: 'email@test.com', CpfCnpj: '831.584.335-40', type: 'Customer')
+    e2 = Nibo::Entity.create(name: 'Test Customer', email: 'email@test.com', CpfCnpj: '197.672.622-02', type: 'Customer')
+    entity = Nibo::Entity.find_by(type: 'Customer', email: 'email@test.com', CpfCnpj: '831.584.335-40')
+
+    expect(entity.EntityId).to_not be_nil
+    expect(entity.Type).to eq('Customer')
+    expect(entity.Name).to eq('Test Customer')
+    expect(entity.Email).to eq('email@test.com')
+    expect(entity.CpfCnpj).to eq('831.584.335-40')
+  end
 end
