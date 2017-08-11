@@ -1,6 +1,6 @@
 module Nibo
   module ApiResource
-    BASE_URL = 'https://api.nibo.com.br/public/v1'
+    BASE_URL = 'https://legacy-api.nibo.com.br/public/v1'
 
     def url_encode(key)
       URI.escape(key.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))

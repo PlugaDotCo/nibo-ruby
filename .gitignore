@@ -11,3 +11,5 @@
 .ruby*
 *.gem
 spec/cassettes/*
+.ruby-version
+.ruby-gemset
